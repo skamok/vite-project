@@ -4,6 +4,9 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
+# Подпуть приложения (например /tanstackstart). Передаётся из Dokploy как Build-time Argument.
+ARG BASE_PATH=/
+ENV BASE_PATH=$BASE_PATH
 RUN npm run build
 
 # Запуск SSR-сервера TanStack Start
