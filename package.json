@@ -10,6 +10,7 @@
     "generate-routes": "vite build",
     "build": "vite build",
     "preview": "vite preview",
+    "start": "srvx serve --prod --entry ./dist/server/server.js --static ../client",
     "lint": "eslint",
     "format": "prettier --write . && eslint --fix",
     "check": "prettier --check ."
@@ -22,6 +23,7 @@
     "@tanstack/react-start": "latest",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "srvx": "^1.0.8",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
